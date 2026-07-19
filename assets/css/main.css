@@ -1529,3 +1529,271 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Portfólio Elegante (Estilo Flothemes / Minimalista)
+--------------------------------------------------------------*/
+.portfolio-card-elegant {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--default-color);
+  transition: all 0.4s ease;
+}
+
+.portfolio-card-elegant .portfolio-img-wrap {
+  overflow: hidden;
+  margin-bottom: 25px;
+  position: relative;
+  /* Cria uma proporção de retângulo em pé (retrato), muito usado em fotografia */
+  aspect-ratio: 4 / 5; 
+}
+
+.portfolio-card-elegant .portfolio-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Animação lenta e cinematográfica igual ao site de referência */
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolio-card-elegant:hover .portfolio-img-wrap img {
+  transform: scale(1.06);
+}
+
+.portfolio-card-elegant .portfolio-text {
+  padding: 10px 0;
+}
+
+/* Linha fina dourada/amarela em cima do texto */
+.portfolio-card-elegant .portfolio-line {
+  width: 40px;
+  height: 1px;
+  background-color: var(--accent-color);
+  margin: 0 auto 18px auto;
+  border: none;
+  opacity: 1;
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolio-card-elegant:hover .portfolio-line {
+  width: 80px; /* A linha estica suavemente no hover */
+}
+
+.portfolio-card-elegant .portfolio-title {
+  font-family: var(--heading-font);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Espaçamento largo de fonte elegante */
+  color: var(--heading-color);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.portfolio-card-elegant:hover .portfolio-title {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Página Genérica de Categoria (Páginas Internas)
+--------------------------------------------------------------*/
+.portfolio-category-title {
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 600;
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+}
+
+.portfolio-category-desc {
+  font-family: var(--default-font);
+  font-style: italic;
+  font-size: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.gallery-item-elegant {
+  overflow: hidden;
+  position: relative;
+  background: var(--surface-color);
+}
+
+.gallery-item-elegant img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gallery-item-elegant:hover img {
+  transform: scale(1.05); /* Efeito suave de zoom ao passar o mouse */
+}
+
+/*--------------------------------------------------------------
+# Seção de Investimento / Pacotes (Estilo Luxo)
+--------------------------------------------------------------*/
+.pricing .pricing-card {
+  background: var(--surface-color);
+  padding: 50px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.pricing .pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Destaque para o Pacote Gold */
+.pricing .pricing-card.premium {
+  background: #1a1a1a; /* Fundo escuro super elegante */
+  color: #ffffff;
+  border: none;
+  transform: scale(1.06); /* Deixa o cartão levemente maior */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+@media (max-width: 992px) {
+  .pricing .pricing-card.premium {
+    transform: scale(1);
+  }
+}
+
+.pricing .pricing-card.premium:hover {
+  transform: scale(1.06) translateY(-10px);
+}
+
+.pricing .pricing-card h3 {
+  font-family: var(--heading-font);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricing .pricing-card.premium h3 {
+  color: var(--accent-color); /* Título do Premium em destaque */
+}
+
+.pricing .price {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+  font-family: var(--heading-font);
+}
+
+.pricing .pricing-card.premium .price {
+  color: #ffffff;
+}
+
+.pricing .price sup {
+  font-size: 22px;
+  font-weight: 400;
+  vertical-align: top;
+  position: relative;
+  top: 15px;
+  margin-right: 5px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.pricing .pricing-card.premium .price sup {
+  color: color-mix(in srgb, #ffffff, transparent 30%);
+}
+
+.pricing .description {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 30px;
+  font-style: italic;
+  min-height: 45px;
+}
+
+.pricing .pricing-card.premium .description {
+  color: #d1d1d1;
+}
+
+.pricing .features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  text-align: left;
+}
+
+.pricing .features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.pricing .pricing-card.premium .features li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ícones de check */
+.pricing .features li i {
+  color: var(--accent-color);
+  font-size: 22px;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+/* Faixa lateral de destaque */
+.pricing .ribbon {
+  position: absolute;
+  top: 25px;
+  right: -40px;
+  background: var(--accent-color);
+  color: #1a1a1a;
+  padding: 6px 45px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Botões Modernos */
+.pricing .btn-pricing {
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  color: var(--default-color);
+  border: 2px solid var(--default-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.pricing .btn-pricing:hover {
+  background: var(--default-color);
+  color: #ffffff;
+}
+
+.pricing .btn-pricing-premium {
+  background: var(--accent-color);
+  color: #1a1a1a;
+  border-color: var(--accent-color);
+}
+
+.pricing .btn-pricing-premium:hover {
+  background: #ffffff;
+  color: #1a1a1a;
+  border-color: #ffffff;
+}
